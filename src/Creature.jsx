@@ -14,7 +14,7 @@ function Creature(props) {
         imageRendering: 'pixelated'
     };
 
-    const handleClick = event =>{
+    /* const handleClick = event =>{
         if (isAwake === false) {
             setIsAwake(true);
             setXCoord(Math.floor(Math.random() * 681))
@@ -23,7 +23,11 @@ function Creature(props) {
         else {
             setIsAwake(false);
         }
-    }
+    } */
+
+        const handleClick = () => {
+            props.onWake(props.id)
+        }
 
     return (
         <div style={style} onClick={handleClick}>
